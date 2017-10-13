@@ -1,4 +1,7 @@
 export default {
-  increment: state => state.count++,
-  decrement: state => state.count--
+  INCREMENT: state => state.count++,
+  DECREMENT: state => state.count--,
+  UPDATABANNERIMGS: (state,data) => {
+    state.company[0].serverData = data
+  }
 }

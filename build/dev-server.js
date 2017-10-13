@@ -49,7 +49,7 @@ app.use(hotMiddleware)
 
 // proxy api requests
 Object.keys(proxyTable).forEach(function (context) {
-  const options = proxyTable[context]
+  var options = proxyTable[context]
   if (typeof options === 'string') {
     options = { target: options }
   }

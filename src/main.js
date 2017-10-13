@@ -28,7 +28,7 @@ var myVue = new Vue({
   render: h =>h(App)
 })
 
-console.log(myVue)
+// console.log(myVue)
 
 let scrollTop = 0;
 

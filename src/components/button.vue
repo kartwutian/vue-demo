@@ -1,6 +1,15 @@
 <template>
-    <yd-layout title="Button">
-
+    <yd-layout>
+        <div slot="navbar">
+          <yd-navbar :title="title" v-if="!!title">
+            <router-link :to="link || '/index'" slot="left">
+              <yd-navbar-back-icon></yd-navbar-back-icon>
+            </router-link>
+            <router-link :to="link || '/index'" slot="right">
+              <yd-navbar-next-icon></yd-navbar-next-icon>
+            </router-link>
+          </yd-navbar>
+        </div>
         <yd-button-group class="demo-pitch">
 
             <yd-button type="primary">primary</yd-button>
@@ -21,3 +30,17 @@
 
     </yd-layout>
 </template>
+<script>
+  export default {
+      data(){
+          return {
+              link: '/index'
+          }
+      },
+      computed:{
+          title(){
+              return 'buttons'
+          }
+      }
+  }
+</script>
