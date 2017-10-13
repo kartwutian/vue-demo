@@ -21,6 +21,10 @@ module.exports = merge(baseWebpackConfig, {
             },
             sourceMap: true
         }),
+        // extract css into its own file
+        new ExtractTextPlugin({
+          filename: ('[name].css')
+        }),
         // generate demo index.html with correct asset hash for caching.
         // you can customize output by editing /index.html
         // see https://github.com/ampedandwired/html-webpack-plugin

@@ -2,7 +2,8 @@
  * YDUI 可伸缩布局方案
  * rem计算方式：设计图尺寸px / 100 = 实际rem  例: 100px = 1rem
  */
-!function (window) {
+
+function flexible () {
 
     /* 设计图文档宽度 */
     var docWidth = 750;
@@ -35,4 +36,10 @@
     window.addEventListener(resizeEvt, recalc, false);
     doc.addEventListener('DOMContentLoaded', recalc, false);
 
-}(window);
+}
+
+if(typeof exports === 'object' && typeof module !== 'undefined'){
+  module.exports = flexible
+}else{
+  flexible()
+}

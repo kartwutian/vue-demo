@@ -1,10 +1,17 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
 module.exports = {
     module: {
         rules: [
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',
-                exclude: /node_modules/
+                exclude: /node_modules/,
+                options: {
+                  loaders: {
+                    less: ExtractTextPlugin.extract('css-loader!less-loader')
+                  }
+                }
             },
             {
                 test: /\.js$/,

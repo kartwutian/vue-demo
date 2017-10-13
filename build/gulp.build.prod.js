@@ -23,5 +23,10 @@ gulp.task('flexible', function () {
         .pipe(require('gulp-uglify')())
         .pipe(gulp.dest('../demo/gulpfile'));
 });
+// gulp.task('ugly', function () {
+//     gulp.src('./app.js')
+//         .pipe(require('gulp-uglify')())
+//         .pipe(gulp.dest('./demo/'));
+// });
 
 gulp.task('default', ['css:base', 'css:ydui', 'flexible']);

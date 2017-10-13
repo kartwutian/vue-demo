@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import {pageScroll} from '../../../../utils/assist';
-
-const LoadingConstructor = Vue.extend(require('./loading.vue'));
+import Template from './loading.vue'
+const LoadingConstructor = Vue.extend(Template);
 
 const instance = new LoadingConstructor({
     el: document.createElement('div')
