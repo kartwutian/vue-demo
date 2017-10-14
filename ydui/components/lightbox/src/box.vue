@@ -7,7 +7,7 @@
             </div>
             <div class="yd-lightbox-img" @click="show = !show">
                 <slider autoplay="0" :showPagination="false" :callback="changeIndex" :index="index">
-                    <slider-item v-for="item in imgItems" :key="item.$el">
+                    <slider-item v-for="item in imgItems">
                         <img :src="getImgSrc(item.$el)">
                     </slider-item>
                 </slider>

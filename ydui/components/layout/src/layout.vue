@@ -1,8 +1,8 @@
 <template>
-    <section class="yd-flexview">
-        <slot name="navbar" v-if="showNavbar" >
-            <yd-navbar :title="title" v-if="!!title" ref="navbar">
-                <router-link :to="link || '/index'" slot="left">
+    <section class="vui-flexview">
+        <slot name="navbar" v-if="showNavbar">
+            <yd-navbar :title="title" v-if="!!title">
+                <router-link :to="link || '/'" slot="left">
                     <yd-navbar-back-icon></yd-navbar-back-icon>
                 </router-link>
             </yd-navbar>
@@ -10,8 +10,8 @@
 
         <slot name="top"></slot>
 
-        <section class="yd-scrollview" ref="scrollView"  id="scrollView">
-            <slot></slot>
+        <section class="vui-scrollview" ref="scrollView" id="scrollView">
+            <slot name="scollview"></slot>
         </section>
 
         <slot name="bottom"></slot>
@@ -22,7 +22,7 @@
 
 <script type="text/babel">
     export default {
-        name: 'yd-layout',
+        name: 'vui-layout',
         props: {
             link: String,
             title: String,

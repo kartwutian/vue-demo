@@ -6,9 +6,11 @@ import fastclick from 'fastclick'
 import router from './router'
 import store from './store'
 import YDUI from '../ydui/ydui'
+import VUI from '../ydui/vui'
 import axios from 'axios'
-
 require('../ydui/ydui.flexible')()
+
+Vue.use(AlloyFingerVue); // use AlloyFinger's plugin
 
 Vue.use({
   install: function (Vue) {
@@ -17,6 +19,7 @@ Vue.use({
 })
 fastclick.attach(document.body)
 Vue.use(YDUI)
+Vue.use(VUI)
 
 Vue.config.productionTip = false
 

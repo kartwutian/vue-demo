@@ -12,7 +12,6 @@
 
 <style lang="less">
   @import "./styles/demo.less";
-  @import "../ydui/styles/base.less";
   .component-fade-enter-active, .component-fade-leave-active {
     transition: opacity .3s ease;
   }

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import {pageScroll} from '../../../../utils/assist';
-import Template from './alert.vue'
-const AlertConstructor = Vue.extend(Template);
+
+const AlertConstructor = Vue.extend(require('./alert.vue'));
 
 
 const instance = new AlertConstructor({

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import {pageScroll} from '../../../../utils/assist';
-import Template from './confirm.vue'
-const ConfirmConstructor = Vue.extend(Template);
+
+const ConfirmConstructor = Vue.extend(require('./confirm.vue'));
 
 const instance = new ConfirmConstructor({
     el: document.createElement('div')

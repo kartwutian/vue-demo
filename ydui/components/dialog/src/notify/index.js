@@ -1,6 +1,6 @@
 import Vue from 'vue';
-import Template from './notify.vue'
-const NotifyConstructor = Vue.extend(Template);
+
+const NotifyConstructor = Vue.extend(require('./notify.vue'));
 
 const instance = new NotifyConstructor({
     el: document.createElement('div')

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import {pageScroll} from '../../../../utils/assist';
-import Template from './toast.vue'
-const ToastConstructor = Vue.extend(Template);
+
+const ToastConstructor = Vue.extend(require('./toast.vue'));
 
 const instance = new ToastConstructor({
     el: document.createElement('div')
